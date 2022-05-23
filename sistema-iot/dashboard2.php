@@ -129,7 +129,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_1.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_1.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>
@@ -177,7 +177,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_2.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_2.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>
@@ -228,7 +228,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_0.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_0.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>

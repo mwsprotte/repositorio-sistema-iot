@@ -130,7 +130,7 @@ $dataChart = date('d/m/y');
 			$("#div_refresh").load("cards_3_0.php");
 			setInterval(function() {
 				$("#div_refresh").load("cards_3_0.php");
-			}, 100);
+			}, 1000);
 			// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 		});
 	</script>
