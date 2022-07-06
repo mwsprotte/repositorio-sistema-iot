@@ -70,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
 	// $coeficiente = $row['coeficiente'];
 	// $arquivo = "Histórico_".$dataPesquisa.".xls";
 
-	$coeficiente = "" . $row['coeficiente'] . " E-3";
+	$coeficiente = "" . $row['coeficiente'] . " µ";
 
 	$sql = "SELECT deformacao FROM tb_dados_projeto_2 WHERE ID='$ultimo_id' AND date_time LIKE '%" . $dataAtual . "%'";
 	$sql = $conexao->query($sql);
@@ -103,7 +103,7 @@ if (mysqli_num_rows($result) > 0) {
 	$sql = "SELECT coeficiente_2 FROM tb_dados_projeto_2_2 WHERE ID='$ultimo_id' AND date_time LIKE '%" . $dataAtual . "%'";
 	$sql = $conexao->query($sql);
 	$row = $sql->fetch();
-	$coeficiente_2 = "" . $row['coeficiente_2'] . " E-6";
+	$coeficiente_2 = "" . $row['coeficiente_2'] . "  µ";
 
 	$sql = "SELECT deformacao_2 FROM tb_dados_projeto_2_2 WHERE ID='$ultimo_id' AND date_time LIKE '%" . $dataAtual . "%'";
 	$sql = $conexao->query($sql);

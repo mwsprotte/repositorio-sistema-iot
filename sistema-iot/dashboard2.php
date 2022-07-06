@@ -129,7 +129,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_1.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_1.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>
@@ -143,7 +143,7 @@ $dataChart = date('d/m/y');
 				<div class="card">
 					<div class="card-header" style="text-align: center;">
 						<?php
-						echo "<h3>Variação do Coeficiente de Deformação (E-3) - Sensor 1 ";
+						echo "<h3>Variação do Coeficiente de Deformação  µ - Sensor 1 ";
 						?>
 						<button onClick="window.location.reload();"> ↻ </button></h3>
 					</div>
@@ -177,7 +177,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_2.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_2.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>
@@ -191,7 +191,7 @@ $dataChart = date('d/m/y');
 				<div class="card">
 					<div class="card-header" style="text-align: center;">
 						<?php
-						echo "<h3>Variação do Coeficiente de Deformação (E-3) - Sensor 2";
+						echo "<h3>Variação do Coeficiente de Deformação  µ - Sensor 2";
 						?>
 						<button onClick="window.location.reload();"> ↻ </button></h3>
 					</div>
@@ -228,7 +228,7 @@ $dataChart = date('d/m/y');
 				$("#div_refresh").load("cards_2_0.php");
 				setInterval(function() {
 					$("#div_refresh").load("cards_2_0.php");
-				}, 100);
+				}, 1000);
 				// O NÚMERO ACIMA É O TEMPO EM MILISSEGUNDOS DA ATUALIZAÇÃO DOS DADOS
 			});
 		</script>
@@ -242,7 +242,7 @@ $dataChart = date('d/m/y');
 				<div class="card">
 					<div class="card-header" style="text-align: center;">
 						<?php
-						echo "<h3>Variação do Coeficiente de Deformação (E-3) - Sensor 1 ";
+						echo "<h3>Variação do Coeficiente de Deformação  µ - Sensor 1 ";
 						?>
 						<button onClick="window.location.reload();"> ↻ </button></h3>
 					</div>
@@ -256,7 +256,7 @@ $dataChart = date('d/m/y');
 				<div class="card">
 					<div class="card-header" style="text-align: center;">
 						<?php
-						echo "<h3>Variação do Coeficiente de Deformação (E-3) - Sensor 2";
+						echo "<h3>Variação do Coeficiente de Deformação  µ - Sensor 2";
 						?>
 						<button onClick="window.location.reload();"> ↻ </button></h3>
 					</div>
