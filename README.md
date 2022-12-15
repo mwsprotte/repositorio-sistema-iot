@@ -1,8 +1,10 @@
-![Shape1](RackMultipart20221215-1-x6nkwu_html_32e7161ecff1a031.gif) ![Shape2](RackMultipart20221215-1-x6nkwu_html_c34e47c0a08f5229.gif)
 
-# Tutorial: Servidor e Conexão dos Dispositivos IoT NodeMCU/ESP8266 Usando a Rede Local
 
-![](RackMultipart20221215-1-x6nkwu_html_97412f4c1ce1566b.png)
+# Servidor e Conexão dos Dispositivos IoT NodeMCU/ESP8266 Usando a Rede Local
+
+Este sistema faz parte de um trabalho desenvolvido por mim em um projeto de pesquisa do curso de Engenharia Elétrica do IFSC, e consiste em um Sistema IoT de interface Web e sistema embarcado ESP83266 capaz de receber, armazenar e exibir dados provenientes dessa plataforma. Foi aplicado em projetos relacionados a monitorametne energético e telemetria de motores elétricos de grande porte. Atualmente está sendo desenvolvida e será publicada uma nova versão deste sistema. 
+
+Esta documentação trata de sua implementação na rede local e de sua integrção com o ESP8266. 
 
 # Sumário
 
