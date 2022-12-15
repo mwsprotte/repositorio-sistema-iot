@@ -8,31 +8,31 @@ Esta documentação trata de sua implementação na rede local e de sua integrç
 
 # Sumário
 
-[Instalação e Configuração dos Softwares Necessários 2](#_Toc108017813)
+[Instalação e Configuração dos Softwares Necessários](#_Toc108017813)
 
-[Arduino IDE 2](#_Toc108017814)
+[Arduino IDE](#_Toc108017814)
 
-[Driver e Script do NodeMCU para ESP8266 2](#_Toc108017815)
+[Driver e Script do NodeMCU para ESP8266](#_Toc108017815)
 
-[Configuração do ESP8266 usando módulo FTDI flash 4](#_Toc108017816)
+[Configuração do ESP8266 usando módulo FTDI flash](#_Toc108017816)
 
-[Teste da Instalação 6](#_Toc108017817)
+[Teste da Instalação](#_Toc108017817)
 
-[Instalação do Software XAMPP 8](#_Toc108017818)
+[Instalação do Software XAMPP](#_Toc108017818)
 
-[Lançamento do Banco de Dados e Site 9](#_Toc108017819)
+[Lançamento do Banco de Dados e Site](#_Toc108017819)
 
-[Configurando o Banco MySQL 9](#_Toc108017820)
+[Configurando o Banco MySQL](#_Toc108017820)
 
-[Configurando a Página Web 10](#_Toc108017821)
+[Configurando a Página Web](#_Toc108017821)
 
-[Conectando o ESP2866 ao Wi-Fi 12](#_Toc108017822)
+[Conectando o ESP2866 ao Wi-Fi](#_Toc108017822)
 
-[Programação da Placa 12](#_Toc108017823)
+[Programação da Placa](#_Toc108017823)
 
-[Teste Final 12](#_Toc108017824)
+[Teste Final](#_Toc108017824)
 
-[Referências 13](#_Toc108017825)
+[Referências](#_Toc108017825)
 
 # Instalação e Configuração dos Softwares Necessários
 
@@ -53,7 +53,7 @@ Pré-requisitos:
 
 Para instalar a interface de desenvolvimento Arduino, basta baixá-la no site [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software) e instalar o executável disponível para download (conforme destacado na figura 1), dando todas as permissões necessárias.
 
-![](RackMultipart20221215-1-x6nkwu_html_c0efa5365e14295f.png)
+![](./images/1.png)
 
 _Figura 1: Download da IDE Arduino._
 
@@ -64,10 +64,11 @@ Após instalado o IDE Arduino, é necessário configurá-lo para trabalhar com o
 - Primeiramente é necessário instalar o seguinte driver, disponível no link: [https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers)
 
 - Em seguida, é necessário inserir a seguinte URL dentro das preferências do Arduino IDE (vide tela exibida na figura 2):
+```
+http://arduino.esp8266.com/stable/package\_esp8266com\_index.json
+```
 
-**http://arduino.esp8266.com/stable/package\_esp8266com\_index.json**
-
-![](RackMultipart20221215-1-x6nkwu_html_7fc3b64844a3788c.png)
+![](./images/2.png)
 
 _Figura 2: Preferências no IDE Arduino, com destaque na região onde deve-se colar a URL (link do script)._
 
