@@ -175,7 +175,9 @@ _Figura 12: Interface XAMPP com os módulos a se ativar destacados._
 
 Depois de ativar os módulos, acessa-se o seguinte endereço através de qualquer navegador Web de seu computador:
 
-[**localhost/phpmyadmin/**](/C:/Users/mspro/Desktop/localhost/phpmyadmin/)
+```
+localhost/phpmyadmin/
+```
 
 Na plataforma acessada, será criado o baco de dados do sistema. Para isso, seleciona-se "novo" e define-se o nome para o banco de dados como " **dados-sistema-iot**", conforme figura 13.
 
