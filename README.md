@@ -61,9 +61,10 @@ _Figura 1: Download da IDE Arduino._
 
 Após instalado o IDE Arduino, é necessário configurá-lo para trabalhar com o ESP8266. Para tal, se faz necessário fazer as etapas a seguir:
 
-- Primeiramente é necessário instalar o seguinte driver, disponível no link: [https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers)
+- Primeiramente é necessário instalar o seguinte driver, disponível neste  [link](https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers).
 
-- Em seguida, é necessário inserir a seguinte URL dentro das preferências do Arduino IDE (vide tela exibida na figura 2):
+- Em seguida, é necessário inserir a seguinte URL dentro das preferências do Arduino IDE (conforme tela exibida na figura 2):
+
 ```
 http://arduino.esp8266.com/stable/package\_esp8266com\_index.json
 ```
@@ -72,13 +73,17 @@ http://arduino.esp8266.com/stable/package\_esp8266com\_index.json
 
 _Figura 2: Preferências no IDE Arduino, com destaque na região onde deve-se colar a URL (link do script)._
 
+
 - Então, instala-se o gerenciador de placa para o ESP8266, conforme as figuras 3 e 4:
 
-![](RackMultipart20221215-1-x6nkwu_html_3fb724d90e560737.png)
+
+![](./images/3.png)
 
 _Figura 3: Acesso ao gerenciador de placas._
 
-![](RackMultipart20221215-1-x6nkwu_html_e5fd78c3531dc006.png)
+
+
+![](./images/4.png)
 
 _Figura 4: Busca e Instalação da Placa ESP8266._
 
@@ -86,15 +91,15 @@ _Figura 4: Busca e Instalação da Placa ESP8266._
 
 Para configurar o ESP8266 usando um módulo FTDI flash (sem usar a placa NodeMCU – se estiveres usando o ESP com essa placa, pule esta seção), além de se fazer todas as instalações e configurações já apresentadas neste tutorial, é necessário montar um circuito para fornecer os níveis de tensão ideias (3.3 V) nas portas necessárias e fazer um esquema de ligação com o FTDI Flash para assim poder gravar na memória do ESP. Vide figuras 6 e 7 para o circuito citado.
 
-![](RackMultipart20221215-1-x6nkwu_html_752f324ff342ea0a.png)
+![](./images/5.png)
 
 _Figura 5: Disponibilidade dos pinos_
 
-![](RackMultipart20221215-1-x6nkwu_html_c97f3bd889eaac55.png)
+![](./images/6.png)
 
 _Figura 6: Esquema da ligação dos pinos_
 
-Os principais pinos são: GPIO0, GPIO2 e GPIO15 – Pinos para configuração do boot (se for ligado conforme o esquema da figura 8, o ESP8266 inicializará normalmente dando boot pela SPI Flash)
+Os principais pinos são: ``GPIO0``, ``GPIO2`` e ``GPIO15`` – Pinos para configuração do boot (se for ligado conforme o esquema da figura 8, o ESP8266 inicializará normalmente dando boot pela SPI Flash)
 
 - Botão Reset – ao ser pressionado o ESP8266 reiniciará.
 - Botão Upload – Usado para gravar um novo firmware na memória e funciona da seguinte maneira:
@@ -105,13 +110,13 @@ Os principais pinos são: GPIO0, GPIO2 e GPIO15 – Pinos para configuração do
 
 Fazendo a sequência do botão upload, o ESP8266 entrará em modo de programação até que seja reiniciado. Para poder programá-lo é necessário alterar a placa no Arduino IDE para "_Generic ESP8266 Module_" conforme ilustra a figura 9.
 
-![](RackMultipart20221215-1-x6nkwu_html_84b177d44a13c0fe.png)
+![](./images/7.png)
 
 _Figura 7: Alteração da placa na IDE._
 
 Além disso, para se enviar a programação para o ESP bem como monitorar o seu funcionamento é necessário usar a comunicação pela porta serial (FTDI Flash). O ESP8266 não possui uma porta USB nativa, por isto para obtermos tal porta, é necessário colocarmos um adaptador USB/SERIAL, conforme a figura 10. **Não se esqueça de ligar o pino TX do FTDI com o RX do ESP, e vice e versa.**
 
-![](RackMultipart20221215-1-x6nkwu_html_a9249ffed3e4e0c9.png)
+![](./images/8.png)
 
 _Figura 8: Comunicação com o computador pela porta serial_
 
@@ -121,33 +126,35 @@ Feito todos esses passos, carrega-se o código para o ESP e quando finalizado pr
 
 É possível testar se o computador está se comunicando corretamente com a placa, executando um código de exemplo conforme as imagens 5 e 6 e inserindo o código a seguir.
 
-![](RackMultipart20221215-1-x6nkwu_html_672a38ac1f895978.png)
+![](./images/9.png)
 
 _Figura 9: Seleção da placa instalada (para ESP apenas, selecionar Generic ESP8266 Module)._
 
-![](RackMultipart20221215-1-x6nkwu_html_1d43c51f418d6428.png)
+![](./images/10.png)
 
 _Figura 10: Seleção da porta disponível._
 
 Vide abaixo o código para teste. Basta copiá-lo na IDE e lançar para a placa.
 
-**void setup() {**
+```
+void setup() {
 
-**pinMode(LED\_BUILTIN, OUTPUT);**
+pinMode(LED_BUILTIN, OUTPUT);
 
-**}**
+}
 
-**void loop() {**
+void loop() {
 
-**digitalWrite(LED\_BUILTIN, HIGH);**
+digitalWrite(LED_BUILTIN, HIGH);
 
-**delay(1000);**
+delay(1000);
 
-**digitalWrite(LED\_BUILTIN, LOW);**
+digitalWrite(LED_BUILTIN, LOW);
 
-**delay(1000);**
+delay(1000);
 
-**}**
+}
+```
 
 Esse código faz o led da placa NodeMCU/ESP piscar em 1Hz, ou seja, se a luz piscar a cada segundo a placa e a IDE estão devidamente instaladas. Os códigos referentes à comunicação do ESP com o sistema, serão expostos nesse texto nas próximas seções.
 
@@ -155,11 +162,11 @@ Esse código faz o led da placa NodeMCU/ESP piscar em 1Hz, ou seja, se a luz pis
 
 O XAMPP é um pacote com os principais servidores de código aberto do mercado, incluindo FTP, banco de dados MySQL e Apache com suporte a linguagem PHP. Ele servirá para hospedar o banco de dados MySQL e o sistema localmente em seu PC com Windows.
 
-O pacote de instalação pode ser baixado no seguinte link: [https://www.apachefriends.org/pt\_br/index.html](https://www.apachefriends.org/pt_br/index.html)
+O pacote de instalação pode ser baixado neste [link](https://www.apachefriends.org/pt_br/index.html).
 
 Basta baixar, executar, selecionar todos os pacotes e dar as permissões necessárias para instalar. Vide figura 11.
 
-![](RackMultipart20221215-1-x6nkwu_html_65e6ae928d603bc8.png)
+![](./images/11.png)
 
 _Figura 11: Download do XAMPP._
 
@@ -169,7 +176,7 @@ _Figura 11: Download do XAMPP._
 
 Primeiramente inicia-se o XAMPP e ativa-se os seguintes módulos destacados na figura 12.
 
-![](RackMultipart20221215-1-x6nkwu_html_d13d575bd091070.png)
+![](./images/12.png)
 
 _Figura 12: Interface XAMPP com os módulos a se ativar destacados._
 
@@ -179,41 +186,47 @@ Depois de ativar os módulos, acessa-se o seguinte endereço através de qualque
 localhost/phpmyadmin/
 ```
 
-Na plataforma acessada, será criado o baco de dados do sistema. Para isso, seleciona-se "novo" e define-se o nome para o banco de dados como " **dados-sistema-iot**", conforme figura 13.
+Na plataforma acessada, será criado o baco de dados do sistema. Para isso, seleciona-se "novo" e define-se o nome para o banco de dados como: ``dados-sistema-iot``, conforme figura 13.
 
-![](RackMultipart20221215-1-x6nkwu_html_6a8b6fcf63862a6e.png)
+![](./images/13.png)
 
 _Figura 13: Criação do banco de dados._
 
-Feito isso, cola-se o código do banco de dados do sistema dentro da guia "SQL". Tal código pode ser acessado no link a seguir (subpasta "Banco de dados"): [https://github.com/mwsprotte/repositorio-sistema-iot.git](https://github.com/mwsprotte/repositorio-sistema-iot.git)
+Feito isso, cola-se o código do banco de dados do sistema dentro da guia "SQL". Tal código pode ser acessado [aqui](./Banco_de_Dados/dados-sistema-iot.sql)
 
 Uma vez inserido o código, dá-se o comando executar, conforme destacado na figura 14.
 
-![](RackMultipart20221215-1-x6nkwu_html_ec6c7303e52875df.png)
+![](./images/14.png)
 
 _Figura 14: Comando para a criação do banco de dados._
 
 ## Configurando a Página Web
 
-Os arquivos da página Web do sistema podem ser baixados no seguinte link: [https://github.com/mwsprotte/repositorio-sistema-iot.git](https://github.com/mwsprotte/repositorio-sistema-iot.git)
+Os arquivos da página Web do sistema estão [aqui](./Banco_de_Dados/).
 
-A pasta "sistema-iot" dentro desse arquivo contém o site e deve ser movida para dentro do seguinte caminho em seu computador:
+Deve-se criar uma pasta entitulada ``sistema-iot`` contendo tais aquivos, dentro do seguinte caminho em seu computador:
 
-**C:\xampp\htdocs**
+```
+C:\xampp\htdocs
+```
 
-Para acessar e testar o site, é necessário conhecer o endereço IpV4 do seu dispositivo. Isso pode ser feito da seguinte forma: abre-se o aplicativo nativo do Windows chamado "Prompt de Comando" e insere-se o comando a seguir.
+Para acessar e testar o site, é necessário conhecer o endereço IpV4 do seu dispositivo. Isso pode ser feito da seguinte forma: abre-se o aplicativo nativo do Windows chamado ``Prompt de Comando`` e insere-se o comando a seguir.
 
-**Ipconfig**
+```
+Ipconfig
+```
 
 o prompt retornará vários dados de rede, guarde o seu endereço IPv4.
 
 Com o IPv4 obtido, monta-se a seguinte URL em qualquer navegador:
 
-**XXX/sistema-iot**
+```
+XXX/sistema-iot
+```
 
 Sendo XXX o IPv4 obtido. Se o endereço estiver correto, dará acesso à um site como o da figura 15. Este site poderá ser acessado de qualquer dispositivo conectado à rede, a partir desse mesmo endereço. Podes interagir com ele criando uma conta para ter acesso ao resto da plataforma.
 
-![](RackMultipart20221215-1-x6nkwu_html_3f92817579ae5adf.jpg)
+![](./images/15.jpg)
 
 _Figura 15: Website._
 
@@ -221,16 +234,16 @@ _Figura 15: Website._
 
 ## Programação da Placa
 
-Com o Arduino instalado e o sensor devidamente reconhecido, carrega-se o código arduino presente no link abaixo (subpasta "Código Microcontrolador"). **Esse código precisa ser alterado conforme os atributos da sua rede** (nome, senha, ips etc.), os comentários instruem sobre essas mudanças (é necessário prestar bastante atenção neles). Link: [https://github.com/mwsprotte/repositorio-sistema-iot.git](https://github.com/mwsprotte/repositorio-sistema-iot.git)
+Com o Arduino instalado e o sensor devidamente reconhecido, carrega-se o código arduino presente no [link](./Codigo_Microcontrolador/). **Esse código precisa ser alterado conforme os atributos da sua rede** (nome, senha, ips etc.), os comentários instruem sobre essas mudanças (é necessário prestar bastante atenção neles).
 
 ## Teste Final
 
 Uma forma eficaz de testar se a placa está enviando os dados corretamente via Wi-Fi ao sistema, é acessar a tabela do próprio banco de dados criado. Para isso, executa-se as seguintes etapas:
 
-- Com o XAMPP devidamente iniciado como descrito anteriormente e o(s) sensor(es) rodando o código abordado acima por pelo menos cinco segundos, acessa-se o seguinte endereço, a partir de qualquer navegador de seu computador: [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
-- Então, seleciona-se o banco de dados criado (dados-sistema-iot), e a tabela correspondente aos dados recebidos (tb\_dados), conforme figura 16.
+- Com o XAMPP devidamente iniciado como descrito anteriormente e o(s) sensor(es) rodando o código abordado acima por pelo menos cinco segundos, acessa-se o [seguinte](http://localhost/phpmyadmin/) endereço, a partir de qualquer navegador de seu computador.
+- Então, seleciona-se o banco de dados criado (``dados-sistema-iot``), e a tabela correspondente aos dados recebidos (``tb\_dados``), conforme figura 16.
 
-![](RackMultipart20221215-1-x6nkwu_html_5b8f929da8322bca.png)
+![](./images/16.png)
 
 _Figura 16: Caminho para acessar os dados recebidos_.
 
