@@ -10,29 +10,29 @@ Esta documentação trata de sua implementação na rede local e de sua integrç
 
 [Instalação e Configuração dos Softwares Necessários](#instalacao-e-configuracao-dos-softwares-necessarios)
 
-[Arduino IDE](#_Toc108017814)
+[Arduino IDE](#arduino-ide)
 
-[Driver e Script do NodeMCU para ESP8266](#_Toc108017815)
+[Driver e Script do NodeMCU para ESP8266](#driver-e-script-do-nodemcu-para-esp8266)
 
-[Configuração do ESP8266 usando módulo FTDI flash](#_Toc108017816)
+[Configuracao do ESP8266 usando modulo FTDI flash](#configuracao-do-esp8266-usando-modulo-ftdi-flash)
 
-[Teste da Instalação](#_Toc108017817)
+[Teste da Instalacao](#teste-da-instalacao)
 
-[Instalação do Software XAMPP](#_Toc108017818)
+[Instalação do Software XAMPP](#instalação-do-software-xampp)
 
-[Lançamento do Banco de Dados e Site](#_Toc108017819)
+[Lançamento do Banco de Dados e Site](#lancamento-do-banco-de-dados-e-site)
 
-[Configurando o Banco MySQL](#_Toc108017820)
+[Configurando o Banco MySQL](#configurando-o-banco-mysql)
 
-[Configurando a Página Web](#_Toc108017821)
+[Configurando a Página Web](#configurando-a-página-web)
 
-[Conectando o ESP2866 ao Wi-Fi](#_Toc108017822)
+[Conectando o ESP2866 ao Wi-Fi](#conectando-o-esp2866-ao-wi-fi)
 
-[Programação da Placa](#_Toc108017823)
+[Programação da Placa](#programacao-da-placa)
 
-[Teste Final](#_Toc108017824)
+[Teste Final](#teste-final)
 
-[Referências](#referencias)
+[Referencias](#referencias)
 
 # Instalação e Configuração dos Softwares Necessários
 
@@ -88,7 +88,7 @@ _Figura 3: Acesso ao gerenciador de placas._
 
 _Figura 4: Busca e Instalação da Placa ESP8266._
 
-## Configuração do ESP8266 usando módulo FTDI flash
+## Configuracao do ESP8266 usando modulo FTDI flash
 
 Para configurar o ESP8266 usando um módulo FTDI flash (sem usar a placa NodeMCU – se estiveres usando o ESP com essa placa, pule esta seção), além de se fazer todas as instalações e configurações já apresentadas neste tutorial, é necessário montar um circuito para fornecer os níveis de tensão ideias (3.3 V) nas portas necessárias e fazer um esquema de ligação com o FTDI Flash para assim poder gravar na memória do ESP. Vide figuras 6 e 7 para o circuito citado.
 
@@ -123,7 +123,7 @@ _Figura 8: Comunicação com o computador pela porta serial_
 
 Feito todos esses passos, carrega-se o código para o ESP e quando finalizado pressiona-se o botão **reset** no circuito daFigura 6, dessa forma ele passará a executar o código enviado.
 
-## Teste da Instalação
+## Teste da Instalacao
 
 É possível testar se o computador está se comunicando corretamente com a placa, executando um código de exemplo conforme as imagens 5 e 6 e inserindo o código a seguir.
 
@@ -159,7 +159,7 @@ delay(1000);
 
 Esse código faz o led da placa NodeMCU/ESP piscar em 1Hz, ou seja, se a luz piscar a cada segundo a placa e a IDE estão devidamente instaladas. Os códigos referentes à comunicação do ESP com o sistema, serão expostos nesse texto nas próximas seções.
 
-## Instalação do Software XAMPP
+## Instalacao do Software XAMPP
 
 O XAMPP é um pacote com os principais servidores de código aberto do mercado, incluindo FTP, banco de dados MySQL e Apache com suporte a linguagem PHP. Ele servirá para hospedar o banco de dados MySQL e o sistema localmente em seu PC com Windows.
 
@@ -171,7 +171,7 @@ Basta baixar, executar, selecionar todos os pacotes e dar as permissões necess�
 
 _Figura 11: Download do XAMPP._
 
-# Lançamento do Banco de Dados e Site
+# Lancamento do Banco de Dados e Site
 
 ## Configurando o Banco MySQL
 
@@ -201,7 +201,7 @@ Uma vez inserido o código, dá-se o comando executar, conforme destacado na fig
 
 _Figura 14: Comando para a criação do banco de dados._
 
-## Configurando a Página Web
+## Configurando a Pagina Web
 
 Os arquivos da página Web do sistema estão [aqui](./sistema-iot).
 
@@ -233,7 +233,7 @@ _Figura 15: Website._
 
 # Conectando o ESP2866 ao Wi-Fi
 
-## Programação da Placa
+## Programacao da Placa
 
 Com o Arduino instalado e o sensor devidamente reconhecido, carrega-se o código arduino presente no [link](./Codigo_Microcontrolador/). **Esse código precisa ser alterado conforme os atributos da sua rede** (nome, senha, ips etc.), os comentários instruem sobre essas mudanças (é necessário prestar bastante atenção neles).
 
@@ -250,7 +250,7 @@ _Figura 16: Caminho para acessar os dados recebidos_.
 
 Todos os dados recebidos são acompanhados com a data e horário correspondente, se ao acessar a tabela existirem dados com o dia e horário deste teste, os sensores estão enviando dados ao sistema corretamente.
 
-# Referências
+# Referencias
 
 
 ARDUINO. **Using Arduino IDE to Program NodeMCU.** Disponível em: \<[https://create.arduino.cc/projecthub/najad/using-arduino-ide-to-program-nodemcu-33e899](https://create.arduino.cc/projecthub/najad/using-arduino-ide-to-program-nodemcu-33e899)\>. Acesso em: 20 fev. 2022.
