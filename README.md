@@ -34,7 +34,7 @@ Esta documentação trata de sua implementação na rede local e de sua integrç
 
 [Referencias](#referencias)
 
-# Instalação e Configuração dos Softwares Necessários
+# Instalacao e Configuracao dos Softwares Necessarios
 
 
 Pré-requisitos:
