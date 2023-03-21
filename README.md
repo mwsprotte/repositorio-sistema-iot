@@ -8,7 +8,7 @@ Esta documentação trata de sua implementação na rede local e de sua integrç
 
 # Sumário
 
-[Instalação e Configuração dos Softwares Necessários](#_Toc108017813)
+[Instalação e Configuração dos Softwares Necessários](#instalacao-e-configuracao-dos-softwares-necessarios)
 
 [Arduino IDE](#_Toc108017814)
 
@@ -32,9 +32,10 @@ Esta documentação trata de sua implementação na rede local e de sua integrç
 
 [Teste Final](#_Toc108017824)
 
-[Referências](#_Toc108017825)
+[Referências](#referencias)
 
 # Instalação e Configuração dos Softwares Necessários
+
 
 Pré-requisitos:
 
@@ -202,7 +203,7 @@ _Figura 14: Comando para a criação do banco de dados._
 
 ## Configurando a Página Web
 
-Os arquivos da página Web do sistema estão [aqui](./Banco_de_Dados/).
+Os arquivos da página Web do sistema estão [aqui](./sistema-iot).
 
 Deve-se criar uma pasta entitulada ``sistema-iot`` contendo tais aquivos, dentro do seguinte caminho em seu computador:
 
@@ -250,6 +251,7 @@ _Figura 16: Caminho para acessar os dados recebidos_.
 Todos os dados recebidos são acompanhados com a data e horário correspondente, se ao acessar a tabela existirem dados com o dia e horário deste teste, os sensores estão enviando dados ao sistema corretamente.
 
 # Referências
+
 
 ARDUINO. **Using Arduino IDE to Program NodeMCU.** Disponível em: \<[https://create.arduino.cc/projecthub/najad/using-arduino-ide-to-program-nodemcu-33e899](https://create.arduino.cc/projecthub/najad/using-arduino-ide-to-program-nodemcu-33e899)\>. Acesso em: 20 fev. 2022.
 
