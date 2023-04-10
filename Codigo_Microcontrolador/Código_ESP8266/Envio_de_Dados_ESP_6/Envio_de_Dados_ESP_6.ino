@@ -5,10 +5,10 @@
 #include <ESP8266WiFi.h>
 
 //INSERINDO OS DADOS DA REDE E DO LUGAR, SUBSTITUA OS TERMOS EM CAIXA ALTA A SEGUIR PELOS VALORES REAIS
-const char * ssid = "Sistema_IoT";
+const char * ssid = "Rede-IoT-Matheus";
 const char * password = "entrarentrar";
-const char * host = "10.0.0.101";
-char * local = "A301";
+const char * host = "192.168.0.101";
+char * local = "Teste";
 //-----------------------------------------------------------------------------------------------------
 
 //DECLARANDO AS VARIÁVEIS

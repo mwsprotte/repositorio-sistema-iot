@@ -67,7 +67,7 @@ Após instalado o IDE Arduino, é necessário configurá-lo para trabalhar com o
 - Em seguida, é necessário inserir a seguinte URL dentro das preferências do Arduino IDE (conforme tela exibida na figura 2):
 
 ```
-http://arduino.esp8266.com/stable/package\_esp8266com\_index.json
+https://arduino.esp8266.com/stable/package_esp8266com_index.json
 ```
 
 ![](./images/2.png)
