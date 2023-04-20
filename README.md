@@ -1,3 +1,4 @@
+> :heavy_exclamation_mark: **Attention:** This repository was my first development experience. So, it has a lot off newbie mistakes but it's a little piece of my history and works fine, so I keep it up (actually I'm developing a new, more modern and powerful IoT platform that will be launched next year). This project structure and documentation  is destined to anybody, not restrict for developers.
 
 
 # Servidor e Conexão dos Dispositivos IoT NodeMCU/ESP8266 Usando a Rede Local
